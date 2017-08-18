@@ -2,42 +2,48 @@
 <html>
     <head>
         <title>Broadway Design</title>
-          <link href="./resources/styles/style.css" type="text/css" rel="stylesheet">
+        <link href="./resources/styles/style.css" type="text/css" rel="stylesheet">
+        <script type="text/JavaScript">
+            window.onload = function(e) {
+                var d = new Date();
+                var y = d.getFullYear();
+                var m = document.getElementById('copyrightFooter');
+                m.setAttribute('data-date', y);
+            }
+        </script>
     </head>
     <body>
-        <div class="header"> 
+        <div class="flatiron" id="header"> 
             <h1>Broadway Design</h1>
-            <div id="menu">
-                <a>Home</a> <br /> <br />
-                <a>About</a> <br /> <br />
-                <a>Work</a> <br /> <br />
-                <a>Team</a> <br /> <br />
-                <a>Contact</a>
-            </div>
+                <p id="menu"><a>Home</a></p>
+                <p id="menu"><a>About</a></p>
+                <p id="menu"><a>Work</a></p>
+                <p id="menu"><a>Team</a></p>
+                <p id="menu"><a>Contact</a></p>
         </div>
 
         <h2>Our Process</h2>
  
         <div>
-            <img url="./resources/images/identify.svg" />
+            <img src="./resources/images/identify.svg" />
             <h3>Identify</h3>
             <p>We focus on the most important details.</p>
         </div>
 
         <div>
-            <img url="./resources/images/understand.svg" />
+            <img src="./resources/images/understand.svg" />
             <h3>Understand</h3>
             <p>We study our projects inside and out.</p>
         </div>
 
         <div>
-            <img url="./resources/images/execute.svg" />
+            <img src="./resources/images/execute.svg" />
             <h3>Execute</h3>
             <p>We put everything we have into our work.</p>
         </div>
 
-        <div>
-            <p>Designed in New York</p>
+        <div class="flatiron">
+            <h3>Designed in New York</h3>
         </div>
 
         <div>
@@ -53,16 +59,18 @@
         <h3>Contact</h3>
         <p>
             Phone: (555) 555-5555
-            <br />
+        </p>
+        <p>
             E-mail: test@example.com
-            <br />
-            Twitter: @test
+        </p>
+        <p>
+              Twitter: @test
         </p>
     </div>
 
     <div id="footer">
         <p>
-            &copy; Broadway 2016 &nbsp;
+            <span id="copyrightFooter" class="copyright" data-date="" >&copy; Broadway</span> &nbsp;
             <a>Home</a> &nbsp;
             <a>About</a> &nbsp;
             <a>Work</a> &nbsp;
